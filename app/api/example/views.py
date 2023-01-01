@@ -22,5 +22,4 @@ async def create_example(
     session: AsyncSession = Depends(db_session),
 ) -> Example:
     example_service = ExampleService(session=session)
-    example = await example_service.create_example(data)
-    return example
+    return await example_service.create_example(data)
